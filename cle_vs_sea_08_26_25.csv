@@ -1,0 +1,85 @@
+Inn,Batter,Pitcher,Outs,Bases,Play,LI,RE,WE,WPA,RE24,topbot
+? 1,S Kwan,L Gilbert,0,___,Steven Kwan struck out looking.,0.87,0.43,52.10%,-0.021,-0.21,Top
+? 1,A Rosario,L Gilbert,1,___,Amed Rosario grounded out to second.,0.6,0.22,53.50%,-0.014,-0.14,Top
+? 1,J Ramirez,L Gilbert,2,___,Jose Ramirez singled to left (Liner).,0.39,0.09,52.40%,0.012,0.11,Top
+? 1,J Naylor,L Gilbert,2,1__,Josh Naylor grounded out to second.,0.8,0.2,54.50%,-0.021,-0.2,Top
+? 1,J Rodriguez,S Bieber,0,___,Julio Rodriguez struck out looking.,0.87,0.43,52.40%,-0.021,-0.21,Bot
+? 1,J Winker,S Bieber,1,___,Jesse Winker grounded out to first.,0.6,0.22,51.00%,-0.014,-0.14,Bot
+? 1,M Haniger,S Bieber,2,___,Mitch Haniger reached on error to third (Grounder). Error by Tyler Freeman.,0.39,0.09,52.10%,0.012,0.11,Bot
+? 1,E Suarez,S Bieber,2,1__,Eugenio Suarez struck out looking.,0.8,0.2,50.00%,-0.021,-0.2,Bot
+? 2,A Gimenez,L Gilbert,0,___,Andres Gimenez grounded out to first.,0.93,0.43,52.20%,-0.022,-0.21,Top
+? 2,O Gonzalez,L Gilbert,1,___,Oscar Gonzalez flied out to center.,0.63,0.22,53.80%,-0.015,-0.14,Top
+? 2,T Freeman,L Gilbert,2,___,Tyler Freeman grounded out to shortstop.,0.41,0.09,54.80%,-0.01,-0.09,Top
+? 2,C Santana,S Bieber,0,___,Carlos Santana struck out swinging.,0.92,0.43,52.60%,-0.022,-0.21,Bot
+? 2,A Frazier,S Bieber,1,___,Adam Frazier grounded out to second.,0.64,0.22,51.00%,-0.015,-0.14,Bot
+? 2,C Raleigh,S Bieber,2,___,Cal Raleigh flied out to second.,0.42,0.09,50.00%,-0.01,-0.09,Bot
+? 3,A Hedges,L Gilbert,0,___,Austin Hedges doubled to center (Fly).,0.99,0.43,42.70%,0.073,0.61,Top
+? 3,M Straw,L Gilbert,0,_2_,Myles Straw flied out to right. Austin Hedges advanced to 3B.,1.48,1.04,44.00%,-0.012,-0.15,Top
+? 3,S Kwan,L Gilbert,1,__3,Steven Kwan hit a sacrifice fly to center (Fly). Austin Hedges scored.,1.74,0.89,40.70%,0.032,0.2,Top
+? 3,A Rosario,L Gilbert,2,___,Amed Rosario doubled to center (Liner).,0.39,0.09,38.50%,0.022,0.21,Top
+? 3,J Ramirez,L Gilbert,2,_2_,Jose Ramirez flied out to left.,1.16,0.29,41.70%,-0.031,-0.29,Top
+? 3,J Crawford,S Bieber,0,___,J.P. Crawford singled to right (Liner).,1.09,0.43,46.30%,0.046,0.36,Bot
+? 3,S Haggerty,S Bieber,0,1__,Sam Haggerty struck out swinging.,1.92,0.79,38.80%,-0.076,-0.59,Bot
+? 3,J Rodriguez,S Bieber,2,___,Julio Rodriguez struck out swinging.,0.48,0.09,36.10%,-0.012,-0.09,Bot
+? 4,J Naylor,L Gilbert,0,___,Josh Naylor singled to right (Grounder).,0.86,0.43,32.50%,0.035,0.36,Top
+? 4,A Gimenez,L Gilbert,0,1__,Andres Gimenez struck out swinging.,1.46,0.79,35.80%,-0.032,-0.33,Top
+? 4,O Gonzalez,L Gilbert,1,1__,Oscar Gonzalez grounded into a double play to second (Grounder). Josh Naylor out at second.,1.16,0.46,40.60%,-0.048,-0.46,Top
+? 4,J Winker,S Bieber,0,___,Jesse Winker singled to first (Liner).,1.21,0.43,45.70%,0.051,0.36,Bot
+? 4,M Haniger,S Bieber,0,1__,Mitch Haniger grounded into a double play to shortstop (Grounder). Jesse Winker out at second.,2.11,0.79,35.70%,-0.1,-0.71,Bot
+? 4,E Suarez,S Bieber,2,___,Eugenio Suarez struck out looking.,0.54,0.09,34.40%,-0.013,-0.09,Bot
+? 5,T Freeman,L Gilbert,0,___,Tyler Freeman flied out to center.,0.89,0.43,36.50%,-0.022,-0.21,Top
+? 5,A Hedges,L Gilbert,1,___,Austin Hedges grounded out to second.,0.63,0.22,38.00%,-0.015,-0.14,Top
+? 5,M Straw,L Gilbert,2,___,Myles Straw lined out to second.,0.43,0.09,39.00%,-0.01,-0.09,Top
+? 5,C Santana,S Bieber,0,___,Carlos Santana singled to center (Grounder).,1.37,0.43,44.80%,0.058,0.36,Bot
+? 5,A Frazier,S Bieber,0,1__,Adam Frazier reached on a sacrifice with error to third (Bunt Fly). Carlos Santana advanced to 2B on error. Error by Tyler Freeman.,2.36,0.79,53.70%,0.088,0.6,Bot
+? 5,C Raleigh,S Bieber,0,12_,Cal Raleigh fouled out to left. Carlos Santana advanced to 3B. Adam Frazier advanced to 2B.,3.11,1.39,53.60%,-0.001,-0.06,Bot
+? 5,J Crawford,S Bieber,1,_23,J.P. Crawford hit a sacrifice fly to center (Fly). Carlos Santana scored.,2.56,1.33,54.60%,0.01,-0.03,Bot
+? 5,S Haggerty,S Bieber,2,_2_,Sam Haggerty struck out looking.,1.7,0.29,50.00%,-0.046,-0.29,Bot
+? 6,S Kwan,L Gilbert,0,___,Steven Kwan singled to left (Liner).,1.34,0.43,44.60%,0.054,0.36,Top
+? 6,A Rosario,L Gilbert,0,1__,Amed Rosario singled to left (Grounder). Steven Kwan advanced to 2B.,2.25,0.79,36.50%,0.081,0.6,Top
+? 6,J Ramirez,L Gilbert,0,12_,Jose Ramirez flied out to right. Steven Kwan advanced to 3B.,2.81,1.39,38.90%,-0.025,-0.27,Top
+? 6,J Naylor,L Gilbert,1,1_3,Josh Naylor hit a sacrifice fly to right (Liner). Steven Kwan scored.,3.12,1.12,34.50%,0.045,0.08,Top
+? 6,A Gimenez,L Gilbert,2,_2_,Andres Gimenez grounded out to second.,1.32,0.29,36.80%,-0.035,-0.29,Top
+? 6,J Rodriguez,S Bieber,0,___,Julio Rodriguez grounded out to shortstop.,1.58,0.43,32.90%,-0.038,-0.21,Bot
+? 6,J Winker,S Bieber,1,___,Jesse Winker struck out swinging.,1.12,0.22,30.30%,-0.026,-0.14,Bot
+? 6,M Haniger,S Bieber,2,___,Mitch Haniger struck out swinging.,0.73,0.09,28.50%,-0.018,-0.09,Bot
+? 7,O Gonzalez,L Gilbert,0,___,Oscar Gonzalez flied out to left.,0.89,0.43,30.60%,-0.021,-0.21,Top
+? 7,T Freeman,L Gilbert,1,___,Tyler Freeman hit a ground rule double (Fly).,0.64,0.22,26.20%,0.044,0.4,Top
+? 7,A Hedges,L Gilbert,1,_2_,Austin Hedges singled to center (Liner). Tyler Freeman advanced to 3B.,1.29,0.62,21.10%,0.051,0.5,Top
+? 7,M Straw,M Brash,1,1_3,Myles Straw flied out to right.,2.1,1.12,28.20%,-0.071,-0.66,Top
+? 7,S Kwan,M Brash,2,1_3,Steven Kwan flied out to center.,1.89,0.45,33.20%,-0.05,-0.45,Top
+? 7,E Suarez,S Bieber,0,___,Eugenio Suarez singled to left (Grounder).,1.91,0.43,41.20%,0.08,0.36,Bot
+? 7,C Santana,S Bieber,0,1__,Carlos Santana singled to right (Liner). Eugenio Suarez advanced to 3B.,3.26,0.79,61.60%,0.204,0.97,Bot
+? 7,A Frazier,S Bieber,0,1_3,Adam Frazier hit a sacrifice fly to center (Fly). Eugenio Suarez scored.,3.32,1.76,58.50%,-0.031,-0.3,Bot
+? 7,C Raleigh,S Bieber,1,1__,Cal Raleigh grounded into a double play to first (Grounder). Carlos Santana out at second.,2.01,0.46,50.00%,-0.085,-0.46,Bot
+? 8,A Rosario,P Sewald,0,___,Amed Rosario struck out swinging.,1.81,0.43,54.40%,-0.044,-0.21,Top
+? 8,J Ramirez,P Sewald,1,___,Jose Ramirez struck out swinging.,1.32,0.22,57.50%,-0.031,-0.14,Top
+? 8,J Naylor,P Sewald,2,___,Josh Naylor flied out to left.,0.93,0.09,59.80%,-0.023,-0.09,Top
+? 8,J Crawford,J Karinchak,0,___,J.P. Crawford walked.,1.77,0.43,66.30%,0.065,0.36,Bot
+? 8,S Haggerty,J Karinchak,0,1__,Sam Haggerty struck out swinging.,2.78,0.79,60.00%,-0.063,-0.33,Bot
+? 8,J Rodriguez,J Karinchak,1,1__,Julio Rodriguez struck out swinging.,2.36,0.46,54.60%,-0.054,-0.26,Bot
+? 8,J Winker,J Karinchak,2,1__,Jesse Winker struck out looking.,1.73,0.2,50.00%,-0.046,-0.2,Bot
+? 9,A Gimenez,D Castillo,0,___,Andres Gimenez doubled to right (Liner).,2.21,0.43,32.60%,0.174,0.61,Top
+? 9,O Gonzalez,D Castillo,0,_2_,Oscar Gonzalez grounded out to pitcher. Andres Gimenez advanced to 3B.,2.74,1.04,31.90%,0.007,-0.15,Top
+? 9,T Freeman,D Castillo,1,__3,Tyler Freeman flied out to right.,4.7,0.89,50.90%,-0.191,-0.56,Top
+? 9,R Palacios,D Castillo,2,__3,Richie Palacios fouled out to third.,4.33,0.33,62.20%,-0.113,-0.33,Top
+? 9,M Haniger,T Stephan,0,___,Mitch Haniger doubled to left (Liner).,2.18,0.43,79.90%,0.176,0.61,Bot
+? 9,E Suarez,T Stephan,0,_2_,Eugenio Suarez struck out swinging.,2.7,1.04,68.70%,-0.112,-0.41,Bot
+? 9,C Santana,T Stephan,1,_2_,Carlos Santana struck out swinging.,3.19,0.62,60.00%,-0.087,-0.33,Bot
+? 9,A Frazier,T Stephan,2,_2_,Adam Frazier singled to third (Grounder). Mitch Haniger advanced to 3B.,3.74,0.29,62.80%,0.028,0.16,Bot
+? 9,A Frazier,T Stephan,2,1_3,Adam Frazier advanced on defensive indifference to 2B.,4.84,0.45,62.80%,0,0.1,Bot
+? 9,C Raleigh,T Stephan,2,_23,Cal Raleigh grounded out to second.,4.6,0.56,50.00%,-0.128,-0.55,Bot
+? 10,M Straw,M Festa,0,_2_,Myles Straw struck out looking.,2.74,1.04,61.70%,-0.117,-0.41,Top
+? 10,S Kwan,M Festa,1,_2_,Steven Kwan walked.,3.26,0.62,59.70%,0.02,0.21,Top
+? 10,A Rosario,M Festa,1,12_,Amed Rosario grounded into a double play to pitcher (Grounder). Steven Kwan out at second.,4.61,0.83,79.90%,-0.201,-0.83,Top
+? 10,J Crawford,T Stephan,0,_2_,J.P. Crawford sacrificed to pitcher (Bunt Grounder). Cal Raleigh advanced to 3B.,2.7,1.04,81.90%,0.021,-0.15,Bot
+? 10,T France,N Sandlin,1,__3,Ty France struck out swinging.,4.97,0.89,61.80%,-0.201,-0.56,Bot
+? 10,J Rodriguez,N Sandlin,2,__3,Julio Rodriguez was intentionally walked.,4.53,0.33,62.80%,0.009,0.13,Bot
+? 10,J Rodriguez,N Sandlin,2,1_3,Julio Rodriguez advanced on defensive indifference to 2B.,4.84,0.45,62.80%,0,0.1,Bot
+? 10,D Moore,N Sandlin,2,_23,Dylan Moore struck out swinging.,4.6,0.56,50.00%,-0.128,-0.55,Bot
+? 11,J Ramirez,P Murfee,0,_2_,Jose Ramirez was intentionally walked.,2.74,1.04,47.10%,0.029,0.35,Top
+? 11,J Naylor,P Murfee,0,12_,Josh Naylor reached on fielder's choice to first. Amed Rosario advanced to 3B. Jose Ramirez out at second.,3.87,1.39,47.90%,-0.007,-0.27,Top
+? 11,A Gimenez,P Murfee,1,1_3,Andres Gimenez reached on fielder's choice to first. Amed Rosario out at home. Josh Naylor advanced to 2B.,5.51,1.12,68.90%,-0.21,-0.72,Top
+? 11,O Gonzalez,P Murfee,2,12_,Oscar Gonzalez walked. Owen Miller advanced to 3B. Andres Gimenez advanced to 2B.,4.34,0.4,63.80%,0.05,0.32,Top
+? 11,T Freeman,P Murfee,2,123,Tyler Freeman reached on fielder's choice to first. Oscar Gonzalez out at second.,6.83,0.72,79.90%,-0.16,-0.72,Top
+? 11,M Haniger,E Clase,0,_2_,Mitch Haniger singled to right (Liner). Dylan Moore scored.,2.7,1.04,100.00%,0.201,0.76,Bot
