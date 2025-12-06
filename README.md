@@ -1,4 +1,4 @@
-# re24-tables
+# leverage-index-and-re-tables
 
 ### Objectives
 
