@@ -3,7 +3,7 @@ library(tidyverse)
 library(tools)
 library(reshape2)
 
-All <- c(2015:2019, 2021:2023)
+All <- c(2015:2019, 2021:2025)
 
 conn <- dbConnect(Postgres(), dbname = "drpstatcast", host = "localhost",
                   port = 5432, user = "postgres", password = "drppassword")
@@ -25,6 +25,8 @@ WHERE game_date NOT BETWEEN '2015-03-28' AND '2015-04-04'
    AND game_date NOT BETWEEN '2022-10-07' AND '2022-11-05'
    AND game_date NOT BETWEEN '2023-03-28' AND '2023-03-29'
    AND game_date NOT BETWEEN '2023-10-03' AND '2023-11-01'
+   AND game_date NOT BETWEEN '2024-10-01' AND '2024-10-30'
+   AND game_date NOT BETWEEN '2025-09-30' AND '2025-11-01'
    AND game_year != 2020
 "
 
@@ -284,7 +286,7 @@ get_linear_weights <- function(re_type, year) {
                                "pickoff_3b", "passed_ball", "pickoff_error_2b",
                                "pickoff_caught_stealing_3b", "pickoff_error_3b",
                                "pickoff_caught_stealing_home", "intent_walk",
-                               "other_out"))) %>%
+                               "other_out", "truncated_pa"))) %>%
         mutate(events = ifelse(events %in% c(
             "grounded_into_double_play", "runner_double_play",
             "sac_bunt_double_play", "sac_fly_double_play", 
@@ -375,7 +377,7 @@ all_situations_df <- left_join(events_score_df, no_score_df,
                                        ifelse(na_group != 0, lag(out), out),
                                        mean_delta_win_exp)) %>%
     select(-delta_mdwe, -na_group, -base, -cumulative, -out)
-select(all_situations_df, -score_diff_num) %>% View()
+# select(all_situations_df, -score_diff_num) %>% View()
 
 triple_play_df <- missing_situations_df %>%
     filter(events == "triple_play") %>%
@@ -394,14 +396,25 @@ for (i in unique(fixed_triple_play_df$play)) {
             mean_delta_win_exp > 0, -mean_delta_win_exp, mean_delta_win_exp))
 }
 delta_win_exp_df <- rbind(all_situations_df, fixed_triple_play_df) %>%
-    ungroup()
-# View(delta_win_exp_df)
+    ungroup() %>%
+    mutate(mean_delta_win_exp = ifelse(
+        play == "0:__3" & events == "double_play" & score_diff_num == -1,
+        -0.2, mean_delta_win_exp))
+View(delta_win_exp_df)
 
 mean_we_swing_df <- linear_weights_df %>%
     group_by(game_year) %>%
     summarize(mean_we_swing = mean(abs(delta_win_exp)), .groups = "drop") %>%
     mutate(standardized_mean_we_swing = mean_we_swing + 1 - mean(mean_we_swing))
 mean_we_swing <- mean(mean_we_swing_df$mean_we_swing)
+
+baseouts <- c("0:___", "0:1__", "0:_2_", "0:__3", "0:12_", "0:1_3", "0:_23",
+              "0:123", "1:___", "1:1__", "1:_2_", "1:__3", "1:12_", "1:1_3",
+              "1:_23", "1:123", "2:___", "2:1__", "2:_2_", "2:__3", "2:12_",
+              "2:1_3", "2:_23", "2:123")
+baseouts_list <- cbind(baseouts, 1:24) %>%
+    as.data.frame() %>%
+    `colnames<-`(c("play", "n"))
 
 no_runners_baseouts <- c("0:___", "1:___", "2:___")
 no_runners_events <- c("single", "double", "triple", "home_run", "walk", 
@@ -512,7 +525,7 @@ tp_li_df <- left_join(delta_win_exp_df, tp_event_rate_df, by = "events") %>%
 li_df <- rbind(no_runners_li_df, fc_2_outs_li_df, force_2_outs_li_df, 
                force_no_sf_li_df, fc_li_df, force_sf_li_df, tp_li_df) %>%
     arrange(play)
-select(li_df, -score_diff_num) %>% View()
+# select(li_df, -score_diff_num) %>% View()
 
 all_leads_df <- li_df %>%
     select(-score_diff) %>%
@@ -542,99 +555,99 @@ all_leads_df <- li_df %>%
     mutate(score_diff = score_diff_num) %>%
     distinct(play, score_diff, .keep_all = TRUE) %>%
     select(play, score_diff, li)
-View(all_leads_df)
+# View(all_leads_df)
 
 innings_factor <- factor(unique(linear_weights_df$half_inning))
-innings_df_1 <- linear_weights_df %>%
-    filter(half_inning %in% as.vector(innings_factor)[1:17]) %>%
-    group_by(half_inning) %>%
-    summarize(inning_mdwe = mean(delta_win_exp), .groups = "drop") %>%
-    mutate(half_inning = innings_factor[1:17], 
-           inning_mdwe = inning_mdwe + (1 - mean(inning_mdwe)), n = 1:n())
-innings_model_1 <- lm(inning_mdwe ~ n, data = innings_df_1)
-# summary(innings_model_1)
-
-innings_df_2 <- linear_weights_df %>%
-    filter(half_inning %in% as.vector(innings_factor)[17:38]) %>%
-    group_by(half_inning) %>%
-    summarize(inning_mdwe = mean(delta_win_exp), .groups = "drop") %>%
-    mutate(half_inning = innings_factor[17:38], 
-           inning_mdwe = inning_mdwe + (1 - mean(inning_mdwe)), n = 1:n())
-innings_model_2 <- lm(inning_mdwe ~ n, data = innings_df_2)
-# summary(innings_model_2)
-
-bot_9_weight_delta <- innings_model_1$fitted.values[17] - 
-                      innings_model_2$fitted.values[1]
-corrected_model_2_preds <- unname(innings_model_2$fitted.values[1:22]) +
-                           bot_9_weight_delta
-inning_weights_df <- c(unname(innings_model_1$fitted.values[1:16]), 
-                       corrected_model_2_preds) %>%
+inning_weights_df <- c(1.5 - (0.05 * 0:16), (0.65 * log(17)) / log(17:37)) %>%
     as.data.frame() %>%
     mutate(inning = innings_factor) %>%
     `colnames<-`(c("inning_weight", "half_inning")) %>%
-    select(half_inning, inning_weight) %>%
-    mutate(inning_weight = 1)
-View(inning_weights_df)
+    select(half_inning, inning_weight)
+# View(inning_weights_df)
 
 complete_li_df <- left_join(linear_weights_df, all_leads_df,
-                               by = c("play", "score_diff"))
+                            by = c("play", "score_diff"))
 year_li_df <- left_join(complete_li_df, mean_we_swing_df, by = "game_year") %>%
     select(-mean_we_swing)
 leverage_index_df <- left_join(year_li_df, inning_weights_df,
                                by = "half_inning") %>%
-    mutate(li = (li * inning_weight) / standardized_mean_we_swing) %>%
-    select(game_pk, game_date, batting_team, fielding_team, half_inning, 
-           inning_pa, score, score_diff, batter, pitcher, play, re_year, li, 
-           events, rbi, re24, delta_win_exp) %>%
+    mutate(li = (li / inning_weight) / standardized_mean_we_swing) %>%
+    select(game_year, game_pk, game_date, batting_team, fielding_team,
+           half_inning, inning_pa, score, score_diff, batter, pitcher, play,
+           re_year, li, events, rbi, re24, delta_win_exp) %>%
     mutate(li = round(li / mean(li), 4))
 View(leverage_index_df)
 
-tex_sea_df <- read.csv("tex_sea_09_29_22.csv") %>%  # 661128  93  75
-    filter(!(PA %in% c(16, 78, 83, 90, 97)))
-cle_sea_df <- read.csv("cle_vs_sea_08_26_25.csv") %>%  # 662143  79  63
-    filter(!(row_number() %in% c(7, 69, 76, 77, 79))) %>%
-    mutate(inning = paste0(topbot, "_", gsub("\\? ", "", Inn))) %>%
-    select(-Inn, -topbot)
+boli_df <- leverage_index_df %>%
+    group_by(play) %>%
+    summarize(li = mean(li), .groups = "drop") %>%
+    left_join(., baseouts_list, by = "play") %>%
+    as.data.frame() %>%
+    mutate(n = as.numeric(n)) %>%
+    arrange(n) %>%
+    select(-n)
+# View(boli_df)
 
-compare_li_df <- cle_sea_df %>%
-    mutate(my_li = filter(leverage_index_df, game_pk == 662143)$li) %>%
-    select(inning, my_li, LI) %>%
-    `colnames<-`(c("inning", "my_li", "fangraphs_li")) %>%
-    mutate(my_li = round(my_li, 2), li_diff = my_li / fangraphs_li, 
-           n = row_number())
-trend_compare_li_df <- compare_li_df %>%
-    select(-my_li, -fangraphs_li, -n) %>%
-    mutate(inning = factor(inning, levels = unique(compare_li_df$inning))) %>%
-    group_by(inning) %>%
-    summarize(li_diff = mean(li_diff), .groups = "drop") %>%
-    mutate(n = row_number())
-plot_compare_li_df <- compare_li_df %>%
-    select(-inning) %>%
-    melt(id = "n")
+get_li <- function(year, player, type) {
+    if (type == "phLI") {
+        phli_df <- leverage_index_df %>%
+            filter(game_year == year) %>%
+            mutate(topbot = str_sub(half_inning, 1, 3)) %>%
+            group_by(game_pk, topbot) %>%
+            filter(any(batter == player)) %>%
+            ungroup() %>%
+            select(-topbot) %>%
+            group_by(game_pk) %>%
+            filter(any(!(player %in% batter[1:9])), 
+                   row_number() == which(batter == player)[1])
+        return(mean(phli_df$li))
+    } else if (type == "exLI") {
+        exli_df <- leverage_index_df %>%
+            filter(game_year == year) %>%
+            mutate(topbot = str_sub(half_inning, 1, 3)) %>%
+            group_by(game_pk, topbot) %>%
+            filter(any(pitcher == player)) %>%
+            mutate(li_next = lead(li)) %>%
+            ungroup() %>%
+            filter(pitcher == player) %>%
+            group_by(game_pk) %>%
+            filter(row_number() == n()) %>%
+            mutate(li_next = ifelse(is.na(li_next), 0, li_next)) %>%
+            select(-topbot)
+        return(mean(exli_df$li_next))
+    } else {
+        pli_df <- leverage_index_df %>%
+            filter(game_year == year, if_any(c(pitcher, batter),
+                                             ~ .x == player))
+        if (type == "gmLI") {
+            gmli_df <- pli_df %>%
+                group_by(game_pk) %>%
+                filter(row_number() == 1)
+            return(mean(gmli_df$li))
+        } else if (type == "inLI") {
+            inli_df <- pli_df %>%
+                group_by(game_pk, half_inning) %>%
+                filter(row_number() == 1)
+            return(mean(inli_df$li))
+        } else {
+            return(mean(pli_df$li))
+        }
+    }
+}
 
-# tex_sea_model <- lm(li_diff ~ n, data = compare_li_df)
-# summary(tex_sea_model)
-cle_sea_model <- lm(li_diff ~ n, data = trend_compare_li_df)
-summary(cle_sea_model)
+# get_li(year = 2023, player = 669302, type = "exLI")
 
-ggplot(data = plot_compare_li_df, mapping = aes(x = n, y = value, 
-                                                color = variable)) + 
-    geom_point() + 
-    geom_path() +
-    geom_hline(yintercept = 1, colour = "black") +
-    geom_vline(xintercept = 63, colour = "red") +
-    scale_x_continuous(breaks = 1:nrow(compare_li_df)) +
-    scale_y_continuous(breaks = seq(0, 7, length.out = 29))
+compare_li <- function(year, player){
+    gmli <- get_li(year = year, player = player, type = "gmLI")
+    pli <- get_li(year = year, player = player, type = "pLI")
+    inli <- get_li(year = year, player = player, type = "inLI")
+    exli <- get_li(year = year, player = player, type = "exLI")
+    
+    return(list("gmLI_pLI_diff" = pli - gmli, "inLI_pLI_diff" = pli - inli, 
+                "inLI_exLI_diff" = exli - inli))
+}
 
-ggplot(data = trend_compare_li_df, mapping = aes(x = n, y = li_diff)) +
-    geom_point() +
-    geom_path() +
-    geom_smooth(formula = y ~ x, method = "lm", se = FALSE, col = "red") +
-    geom_hline(yintercept = 1, color = "black") +
-    geom_vline(xintercept = mean(1:nrow(trend_compare_li_df)), 
-               color = "black") +
-    scale_y_continuous(limits = c(0.25, 1.75), breaks = seq(0.25, 1.75, 
-                                                            length.out = 7))
+compare_li(year = 2022, player = 592773)
 
 ggplot(data = delta_win_exp_df) +
     geom_line(aes(x = score_diff_num, y = mean_delta_win_exp,
@@ -646,4 +659,5 @@ ggplot(data = delta_win_exp_df) +
 ggplot(data = all_leads_df) +
     geom_line(aes(x = score_diff, y = li, color = play)) +
     scale_x_continuous(breaks = -25:25) +
-    scale_y_continuous(breaks = 0:6)
+    scale_y_continuous(breaks = 0:6) +
+    scale_colour_discrete(breaks = baseouts)

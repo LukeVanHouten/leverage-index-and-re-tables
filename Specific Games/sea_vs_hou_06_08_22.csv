@@ -1,0 +1,81 @@
+half_inning,Batter,Pitcher,Outs,Bases,Play,LI,RE,WE,WPA,RE24
+Top_1,J Winker,J Urquidy,0,___,Jesse Winker walked.,0.87,0.47,46.40%,0.036,0.37
+Top_1,T France,J Urquidy,0,1__,Ty France fouled out to catcher.,1.47,0.84,49.70%,-0.033,-0.34
+Top_1,J Rodriguez,J Urquidy,1,1__,Julio Rodriguez struck out swinging.,1.16,0.49,52.50%,-0.027,-0.28
+Top_1,J Crawford,J Urquidy,2,1__,J.P. Crawford struck out swinging.,0.8,0.22,54.70%,-0.022,-0.22
+Bot_1,J Altuve,L Gilbert,0,___,Jose Altuve walked.,0.87,0.47,58.20%,0.036,0.37
+Bot_1,M Brantley,L Gilbert,0,_2_,Michael Brantley flied out to center. Jose Altuve advanced to 3B.,1.24,1.07,59.50%,-0.013,-0.16
+Bot_1,A Bregman,L Gilbert,1,__3,Alex Bregman reached on fielder's choice to third. Jose Altuve out at home. Alex Bregman advanced to 2B.,1.41,0.91,53.20%,-0.063,-0.6
+Bot_1,Y Alvarez,L Gilbert,2,_2_,Yordan Alvarez singled to center (Liner). Alex Bregman scored.,1.16,0.31,62.90%,0.097,0.91
+Bot_1,K Tucker,L Gilbert,2,1__,Kyle Tucker grounded out to second.,0.69,0.22,61.00%,-0.019,-0.22
+Top_2,E Suarez,J Urquidy,0,___,Eugenio Suarez grounded out to third.,0.97,0.47,63.40%,-0.024,-0.22
+Top_2,A Frazier,J Urquidy,1,___,Adam Frazier struck out swinging.,0.67,0.25,65.00%,-0.016,-0.15
+Top_2,A Toro,J Urquidy,2,___,Abraham Toro doubled to right (Liner).,0.41,0.1,62.70%,0.024,0.21
+Top_2,T Trammell,J Urquidy,2,_2_,Taylor Trammell flied out to right.,1.23,0.31,66.10%,-0.034,-0.31
+Bot_2,Y Gurriel,L Gilbert,0,___,Yuli Gurriel doubled to right (Liner).,0.76,0.47,71.60%,0.055,0.6
+Bot_2,A Diaz,L Gilbert,0,_2_,Aledmys Diaz struck out swinging.,1.07,1.07,67.90%,-0.037,-0.42
+Bot_2,J Siri,L Gilbert,1,_2_,Jose Siri grounded out to shortstop.,1.1,0.65,64.90%,-0.03,-0.34
+Bot_2,M Maldonado,L Gilbert,2,_2_,Martin Maldonado flied out to center.,1.06,0.31,61.90%,-0.029,-0.31
+Top_3,C Raleigh,J Urquidy,0,___,Cal Raleigh flied out to left.,1.04,0.47,64.50%,-0.026,-0.22
+Top_3,J Winker,J Urquidy,1,___,Jesse Winker walked.,0.72,0.25,61.60%,0.03,0.25
+Top_3,T France,J Urquidy,1,1__,Ty France flied out to right.,1.4,0.49,64.90%,-0.033,-0.28
+Top_3,J Rodriguez,J Urquidy,2,_2_,Julio Rodriguez walked.,1.34,0.31,62.50%,0.012,0.11
+Top_3,J Crawford,J Urquidy,2,12_,J.P. Crawford singled to left (Grounder). Jesse Winker scored. Julio Rodriguez advanced to 3B.,1.97,0.42,49.80%,0.127,1.06
+Top_3,E Suarez,J Urquidy,2,_23,Eugenio Suarez walked.,2.28,0.57,47.20%,0.016,0.17
+Top_3,A Frazier,J Urquidy,2,123,Adam Frazier flied out to right.,3.29,0.74,55.40%,-0.082,-0.74
+Bot_3,J Altuve,L Gilbert,0,___,Jose Altuve doubled to left (Liner).,0.99,0.47,62.30%,0.07,0.6
+Bot_3,M Brantley,L Gilbert,0,_2_,Michael Brantley flied out to shortstop.,1.39,1.07,57.60%,-0.047,-0.42
+Bot_3,A Bregman,L Gilbert,1,_2_,Alex Bregman singled to left (Liner). Jose Altuve out at home. Alex Bregman advanced to 2B.,1.41,0.65,53.70%,-0.039,-0.34
+Bot_3,Y Alvarez,L Gilbert,2,_2_,Yordan Alvarez doubled to left (Fly). Alex Bregman scored.,1.34,0.31,66.20%,0.125,1
+Bot_3,K Tucker,L Gilbert,2,_2_,Kyle Tucker singled to right (Liner). Yordan Alvarez scored.,1.1,0.31,75.70%,0.096,0.91
+Bot_3,Y Gurriel,L Gilbert,2,1__,Yuli Gurriel grounded out to second.,0.56,0.22,74.20%,-0.016,-0.22
+Top_4,A Toro,J Urquidy,0,___,Abraham Toro singled to third (Grounder).,1.03,0.47,69.70%,0.045,0.37
+Top_4,T Trammell,J Urquidy,0,1__,Taylor Trammell flied out to left.,1.82,0.84,73.80%,-0.041,-0.34
+Top_4,C Raleigh,J Urquidy,1,1__,Cal Raleigh homered (Fly). Abraham Toro scored.,1.38,0.49,52.70%,0.211,1.75
+Top_4,J Winker,J Urquidy,1,___,Jesse Winker lined out to second.,0.77,0.25,54.60%,-0.019,-0.15
+Top_4,T France,J Urquidy,2,___,Ty France homered (Liner).,0.5,0.1,40.60%,0.139,1
+Top_4,J Rodriguez,J Urquidy,2,___,Julio Rodriguez flied out to center.,0.42,0.1,41.70%,-0.011,-0.1
+Bot_4,A Diaz,L Gilbert,0,___,Aledmys Diaz flied out to center.,1.2,0.47,38.70%,-0.03,-0.22
+Bot_4,J Siri,L Gilbert,1,___,Jose Siri struck out swinging.,0.84,0.25,36.60%,-0.021,-0.15
+Bot_4,M Maldonado,L Gilbert,2,___,Martin Maldonado walked.,0.54,0.1,38.30%,0.017,0.12
+Bot_4,J Altuve,L Gilbert,2,1__,Jose Altuve grounded out to second.,1.1,0.22,35.30%,-0.031,-0.22
+Top_5,J Crawford,J Urquidy,0,___,J.P. Crawford doubled to left (Fly).,0.92,0.47,28.70%,0.066,0.6
+Top_5,E Suarez,J Urquidy,0,_2_,Eugenio Suarez singled to shortstop (Grounder). J.P. Crawford advanced to 3B. Eugenio Suarez Error by Aledmys Diaz.,1.26,1.07,22.10%,0.066,0.73
+Top_5,A Frazier,J Urquidy,0,1_3,Adam Frazier hit a sacrifice fly to center (Fly). J.P. Crawford scored.,1.49,1.8,23.40%,-0.013,-0.31
+Top_5,A Toro,B Bielak,1,1__,Abraham Toro flied out to left.,0.88,0.49,25.50%,-0.021,-0.28
+Top_5,T Trammell,B Bielak,2,1__,Taylor Trammell grounded out to first.,0.63,0.22,27.20%,-0.017,-0.22
+Bot_5,M Brantley,L Gilbert,0,___,Michael Brantley flied out to right.,1.23,0.47,24.10%,-0.031,-0.22
+Bot_5,A Bregman,L Gilbert,1,___,Alex Bregman flied out to right.,0.85,0.25,22.10%,-0.021,-0.15
+Bot_5,Y Alvarez,L Gilbert,2,___,Yordan Alvarez singled to right (Grounder).,0.51,0.1,23.80%,0.017,0.12
+Bot_5,Y Alvarez,L Gilbert,2,1__,Yordan Alvarez was forced out.,1.09,0.22,20.80%,-0.03,-0.22
+Top_6,C Raleigh,B Bielak,0,___,Cal Raleigh grounded out to second.,0.63,0.47,22.30%,-0.016,-0.22
+Top_6,J Winker,B Bielak,1,___,Jesse Winker flied out to third.,0.46,0.25,23.50%,-0.011,-0.15
+Top_6,T France,B Bielak,2,___,Ty France walked.,0.31,0.1,22.60%,0.009,0.12
+Top_6,J Rodriguez,B Bielak,2,1__,Julio Rodriguez was hit by a pitch. Ty France advanced to 2B.,0.6,0.22,21.20%,0.014,0.2
+Top_6,J Crawford,B Bielak,2,12_,J.P. Crawford grounded out to first.,1.2,0.42,24.20%,-0.03,-0.41
+Bot_6,K Tucker,L Gilbert,0,___,Kyle Tucker walked.,1.36,0.47,30.20%,0.059,0.37
+Bot_6,Y Gurriel,L Gilbert,0,1__,Yuli Gurriel struck out swinging.,2.38,0.84,24.80%,-0.053,-0.34
+Bot_6,A Diaz,L Gilbert,1,1__,Aledmys Diaz flied out to center.,1.83,0.49,20.50%,-0.043,-0.28
+Bot_6,J Siri,L Gilbert,2,1__,Jose Siri flied out to right.,1.2,0.22,17.20%,-0.033,-0.22
+Top_7,E Suarez,B Bielak,0,___,Eugenio Suarez struck out swinging.,0.56,0.47,18.60%,-0.014,-0.22
+Top_7,A Frazier,B Bielak,1,___,Adam Frazier flied out to left.,0.42,0.25,19.60%,-0.01,-0.15
+Top_7,A Toro,B Bielak,2,___,Abraham Toro grounded out to second.,0.29,0.1,20.30%,-0.007,-0.1
+Bot_7,M Maldonado,A Munoz,0,___,Martin Maldonado grounded out to shortstop.,1.5,0.47,16.60%,-0.037,-0.22
+Bot_7,J Altuve,A Munoz,1,___,Jose Altuve struck out looking.,1.02,0.25,14.10%,-0.025,-0.15
+Bot_7,M Brantley,A Munoz,2,___,Michael Brantley singled to right (Grounder).,0.59,0.1,16.30%,0.022,0.12
+Bot_7,A Bregman,A Munoz,2,1__,Alex Bregman flied out to right.,1.32,0.22,12.60%,-0.037,-0.22
+Top_8,T Trammell,B Bielak,0,___,Taylor Trammell doubled to center (Liner).,0.45,0.47,9.30%,0.033,0.6
+Top_8,C Raleigh,B Bielak,0,_2_,Cal Raleigh flied out to right. Taylor Trammell advanced to 3B.,0.58,1.07,9.50%,-0.002,-0.16
+Top_8,J Winker,B Bielak,1,__3,Jesse Winker singled to left (Grounder). Taylor Trammell scored.,0.84,0.91,6.30%,0.032,0.58
+Top_8,T France,S Martinez,1,1__,Ty France singled to left (Grounder). Jesse Winker advanced to 2B.,0.32,0.49,5.50%,0.009,0.38
+Top_8,J Rodriguez,S Martinez,1,12_,Julio Rodriguez was hit by a pitch. Jesse Winker advanced to 3B. Ty France advanced to 2B.,0.49,0.87,4.00%,0.015,0.66
+Top_8,J Crawford,S Martinez,1,123,J.P. Crawford grounded into a double play to second (Grounder). Julio Rodriguez out at second.,0.63,1.53,7.70%,-0.037,-1.52
+Bot_8,Y Alvarez,P Sewald,0,___,Yordan Alvarez flied out to center.,0.99,0.47,5.20%,-0.025,-0.22
+Bot_8,K Tucker,P Sewald,1,___,Kyle Tucker flied out to left.,0.61,0.25,3.80%,-0.015,-0.15
+Bot_8,Y Gurriel,P Sewald,2,___,Yuli Gurriel flied out to second.,0.28,0.1,3.00%,-0.007,-0.1
+Top_9,E Suarez,S Martinez,0,___,Eugenio Suarez walked.,0.12,0.47,2.60%,0.005,0.37
+Top_9,A Frazier,S Martinez,0,1__,Adam Frazier grounded into a double play to pitcher (Grounder). Sam Haggerty out at second.,0.19,0.84,3.50%,-0.01,-0.74
+Top_9,A Toro,S Martinez,2,___,Abraham Toro grounded out to pitcher.,0.06,0.1,3.70%,-0.002,-0.1
+Bot_9,A Diaz,D Castillo,0,___,Aledmys Diaz struck out looking.,0.85,0.47,1.60%,-0.021,-0.22
+Bot_9,J Pena,D Castillo,1,___,Jeremy Pena struck out swinging.,0.46,0.25,0.40%,-0.012,-0.15
+Bot_9,J Castro,D Castillo,2,___,Jason Castro struck out swinging.,0.16,0.1,0.00%,-0.004,-0.1

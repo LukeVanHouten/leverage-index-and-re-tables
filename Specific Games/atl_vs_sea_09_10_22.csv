@@ -1,0 +1,64 @@
+half_inning,Batter,Pitcher,Outs,Bases,Des,LI,RE,WE,WPA,RE24
+Top_1,R Acuna Jr.,G Kirby,0,___,Ronald Acuna Jr. struck out swinging.,0.87,0.43,52.10%,-0.021,-0.21
+Top_1,D Swanson,G Kirby,1,___,Dansby Swanson singled to left (Liner).,0.6,0.22,49.70%,0.025,0.24
+Top_1,A Riley,G Kirby,1,1__,Austin Riley grounded into a double play to pitcher (Grounder). Dansby Swanson out at second.,1.17,0.46,54.50%,-0.048,-0.46
+Bot_1,J Rodriguez,M Fried,0,___,Julio Rodriguez singled to left (Grounder).,0.87,0.43,58.10%,0.036,0.36
+Bot_1,T France,M Fried,0,1__,Ty France flied out to right.,1.51,0.79,54.80%,-0.033,-0.33
+Bot_1,M Haniger,M Fried,1,1__,Mitch Haniger struck out swinging.,1.17,0.46,52.10%,-0.027,-0.26
+Bot_1,E Suarez,M Fried,2,1__,Eugenio Suarez singled to left (Liner). Julio Rodriguez advanced to 2B.,0.8,0.2,54.10%,0.02,0.2
+Bot_1,C Santana,M Fried,2,12_,Carlos Santana struck out swinging.,1.68,0.4,50.00%,-0.041,-0.4
+Top_2,M Olson,G Kirby,0,___,Matt Olson flied out to second.,0.93,0.43,52.20%,-0.022,-0.21
+Top_2,T d'Arnaud,G Kirby,1,___,Travis d'Arnaud flied out to center.,0.63,0.22,53.80%,-0.015,-0.14
+Top_2,M Harris II,G Kirby,2,___,Michael Harris II flied out to center.,0.41,0.09,54.80%,-0.01,-0.09
+Bot_2,C Raleigh,M Fried,0,___,Cal Raleigh fouled out to third.,0.92,0.43,52.60%,-0.022,-0.21
+Bot_2,S Haggerty,M Fried,1,___,Sam Haggerty struck out swinging.,0.64,0.22,51.00%,-0.015,-0.14
+Bot_2,J Crawford,M Fried,2,___,J.P. Crawford grounded out to shortstop.,0.42,0.09,50.00%,-0.01,-0.09
+Top_3,V Grissom,G Kirby,0,___,Vaughn Grissom singled to center (Grounder).,0.99,0.43,45.80%,0.042,0.36
+Top_3,E Rosario,G Kirby,0,1__,Eddie Rosario fouled out to left.,1.73,0.79,49.60%,-0.038,-0.33
+Top_3,R Grossman,G Kirby,1,1__,Robbie Grossman struck out looking.,1.35,0.46,52.70%,-0.031,-0.26
+Top_3,R Acuna Jr.,G Kirby,2,_2_,Ronald Acuna Jr. flied out to center (Fly).,1.36,0.29,55.20%,-0.037,-0.29
+Bot_3,A Toro,M Fried,0,___,Abraham Toro flied out to center.,0.99,0.43,52.80%,-0.024,-0.21
+Bot_3,J Rodriguez,M Fried,1,___,Julio Rodriguez grounded out to pitcher.,0.69,0.22,51.10%,-0.016,-0.14
+Bot_3,T France,M Fried,2,___,Ty France grounded out to first.,0.46,0.09,50.00%,-0.011,-0.09
+Top_4,D Swanson,G Kirby,0,___,Dansby Swanson grounded out to pitcher.,1.08,0.43,52.60%,-0.026,-0.21
+Top_4,A Riley,G Kirby,1,___,Austin Riley struck out swinging.,0.75,0.22,54.40%,-0.018,-0.14
+Top_4,M Olson,G Kirby,2,___,Matt Olson struck out looking.,0.49,0.09,55.60%,-0.012,-0.09
+Bot_4,M Haniger,M Fried,0,___,Mitch Haniger was hit by a pitch.,1.07,0.43,60.00%,0.044,0.36
+Bot_4,E Suarez,M Fried,0,1__,Eugenio Suarez flied out to left.,1.83,0.79,56.00%,-0.04,-0.33
+Bot_4,C Santana,M Fried,1,1__,Carlos Santana struck out swinging.,1.44,0.46,52.70%,-0.033,-0.26
+Bot_4,C Raleigh,M Fried,2,1__,Cal Raleigh flied out to center.,1.01,0.2,50.00%,-0.027,-0.2
+Top_5,T d'Arnaud,G Kirby,0,___,Travis d'Arnaud flied out to center.,1.19,0.43,52.90%,-0.029,-0.21
+Top_5,M Harris II,G Kirby,1,___,Michael Harris II flied out to left.,0.84,0.22,54.90%,-0.02,-0.14
+Top_5,V Grissom,G Kirby,2,___,Vaughn Grissom struck out looking.,0.55,0.09,56.20%,-0.014,-0.09
+Bot_5,S Haggerty,M Fried,0,___,Sam Haggerty homered (Fly).,1.17,0.43,72.20%,0.16,1
+Bot_5,J Crawford,M Fried,0,___,J.P. Crawford flied out to center.,0.79,0.43,70.30%,-0.019,-0.2
+Bot_5,A Toro,M Fried,1,___,Abraham Toro grounded out to second.,0.57,0.22,69.00%,-0.013,-0.14
+Bot_5,J Rodriguez,M Fried,2,___,Julio Rodriguez flied out to right.,0.38,0.09,68.00%,-0.009,-0.09
+Top_6,E Rosario,G Kirby,0,___,Eddie Rosario flied out to center.,1.46,0.43,71.60%,-0.035,-0.21
+Top_6,R Grossman,G Kirby,1,___,Robbie Grossman flied out to center.,1.01,0.22,74.00%,-0.024,-0.14
+Top_6,R Acuna Jr.,G Kirby,2,___,Ronald Acuna Jr. struck out swinging.,0.65,0.09,75.60%,-0.016,-0.09
+Bot_6,T France,M Fried,0,___,Ty France struck out swinging.,0.76,0.43,73.70%,-0.018,-0.21
+Bot_6,M Haniger,M Fried,1,___,Mitch Haniger flied out to left.,0.55,0.22,72.50%,-0.013,-0.14
+Bot_6,E Suarez,M Fried,2,___,Eugenio Suarez homered (Fly).,0.38,0.09,84.50%,0.121,1
+Bot_6,C Santana,M Fried,2,___,Carlos Santana singled to center (Fly).,0.21,0.09,85.10%,0.006,0.11
+Bot_6,C Raleigh,M Fried,2,1__,Cal Raleigh struck out looking.,0.42,0.2,84.00%,-0.011,-0.2
+Top_7,D Swanson,G Kirby,0,___,Dansby Swanson singled to center (Liner).,1.27,0.43,78.10%,0.059,0.36
+Top_7,A Riley,G Kirby,0,1__,Austin Riley reached on fielder's choice and error to shortstop. Dansby Swanson advanced to 3B on error. Error by J.P. Crawford.,2.38,0.79,63.70%,0.144,0.97
+Top_7,M Olson,A Munoz,0,1_3,Matt Olson reached on fielder's choice to second. Dansby Swanson scored. Austin Riley out at second.,3.42,1.76,70.80%,-0.071,-0.3
+Top_7,T d'Arnaud,A Munoz,1,1__,Travis d'Arnaud grounded out to catcher. Matt Olson advanced to 2B.,2.35,0.46,74.10%,-0.033,-0.17
+Top_7,M Harris II,A Munoz,2,_2_,Michael Harris II struck out swinging.,2.36,0.29,80.50%,-0.064,-0.29
+Bot_7,S Haggerty,J Chavez,0,___,Sam Haggerty flied out to shortstop.,0.67,0.43,78.90%,-0.016,-0.21
+Bot_7,J Crawford,J Chavez,1,___,J.P. Crawford flied out to left.,0.49,0.22,77.70%,-0.012,-0.14
+Bot_7,A Frazier,J Chavez,2,___,Adam Frazier walked.,0.34,0.09,78.60%,0.009,0.11
+Bot_7,J Rodriguez,J Chavez,2,1__,Julio Rodriguez doubled to center (Liner). Adam Frazier scored.,0.65,0.2,89.80%,0.112,1.09
+Bot_7,T France,J Chavez,2,_2_,Ty France flied out to shortstop.,0.52,0.29,88.40%,-0.014,-0.29
+Top_8,V Grissom,E Swanson,0,___,Vaughn Grissom flied out to center.,1.34,0.43,91.60%,-0.033,-0.21
+Top_8,E Rosario,E Swanson,1,___,Eddie Rosario grounded out to pitcher.,0.86,0.22,93.70%,-0.021,-0.14
+Top_8,R Grossman,E Swanson,2,___,Robbie Grossman fouled out to left.,0.46,0.09,94.80%,-0.011,-0.09
+Bot_8,M Haniger,K Yates,0,___,Mitch Haniger walked.,0.19,0.43,95.60%,0.008,0.36
+Bot_8,E Suarez,K Yates,0,1__,Eugenio Suarez flied out to right.,0.31,0.79,94.90%,-0.007,-0.33
+Bot_8,C Santana,K Yates,1,1__,Carlos Santana struck out swinging.,0.26,0.46,94.30%,-0.006,-0.26
+Bot_8,C Raleigh,K Yates,2,1__,Cal Raleigh grounded out to second.,0.19,0.2,93.80%,-0.005,-0.2
+Top_9,R Acuna Jr.,P Sewald,0,___,Ronald Acuna Jr. grounded out to first (Grounder).,1.36,0.43,97.10%,-0.033,-0.21
+Top_9,D Swanson,P Sewald,1,___,Dansby Swanson struck out swinging.,0.82,0.22,99.00%,-0.02,-0.14
+Top_9,A Riley,P Sewald,2,___,Austin Riley struck out swinging.,0.38,0.09,100.00%,-0.01,-0.09
