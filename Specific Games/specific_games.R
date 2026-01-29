@@ -1,4 +1,5 @@
 library(tidyverse)
+library(reshape2)
 
 leverage_index_df <- read.csv("specific_games.csv")
 
@@ -14,8 +15,8 @@ atl_sea_df <- read.csv("atl_vs_sea_09_10_22.csv")  # 662088 63 NA
 sea_hou_df <- read.csv("sea_vs_hou_06_08_22.csv") %>%  # 662760 79 NA
     filter(row_number() != 49)
 
-compare_li_df <- cle_sea_df %>%
-    mutate(my_li = filter(leverage_index_df, game_pk == 662143)$li) %>%
+compare_li_df <- sea_hou_df %>%
+    mutate(my_li = filter(leverage_index_df, game_pk == 662760)$li) %>%
     select(half_inning, my_li, LI) %>%
     `colnames<-`(c("half_inning", "my_li", "fangraphs_li")) %>%
     mutate(my_li = round(my_li, 2), li_diff = my_li/ fangraphs_li, 
@@ -31,10 +32,10 @@ plot_compare_li_df <- compare_li_df %>%
     select(-half_inning) %>%
     melt(id = "n")
 
-# tex_sea_model <- lm(li_diff ~ n, data = trend_compare_li_df)
-# summary(tex_sea_model)
-cle_sea_model <- lm(li_diff ~ n, data = trend_compare_li_df)
-summary(cle_sea_model)
+tex_sea_model <- lm(li_diff ~ n, data = trend_compare_li_df)
+summary(tex_sea_model)
+# cle_sea_model <- lm(li_diff ~ n, data = trend_compare_li_df)
+# summary(cle_sea_model)
 # atl_sea_model <- lm(li_diff ~ n, data = trend_compare_li_df)
 # summary(atl_sea_model)
 # sea_hou_model <- lm(li_diff ~ n, data = trend_compare_li_df)
@@ -45,8 +46,6 @@ x_2 <- 18:37
 y_1 <- 1.5 - (0.05 * x_1)
 y_2 <- ((y_1[length(y_1)] - 0.05) * log(x_2[1])) / log(x_2)
 y <- c(y_1, y_2)
-
-innings_factor <- factor(unique(linear_weights_df$half_inning))
 
 scale_pred_df <- left_join(compare_li_df, data.frame(
     half_inning = trend_compare_li_df$half_inning, 

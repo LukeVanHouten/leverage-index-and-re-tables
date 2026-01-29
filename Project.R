@@ -643,11 +643,31 @@ compare_li <- function(year, player){
     inli <- get_li(year = year, player = player, type = "inLI")
     exli <- get_li(year = year, player = player, type = "exLI")
     
-    return(list("gmLI_pLI_diff" = pli - gmli, "inLI_pLI_diff" = pli - inli, 
-                "inLI_exLI_diff" = exli - inli))
+    return(c(gmli, pli, inli, exli))
+    
+    # return(list("gmLI_pLI_diff" = pli - gmli, "inLI_pLI_diff" = pli - inli, 
+    #             "inLI_exLI_diff" = exli - inli))
 }
 
 compare_li(year = 2022, player = 592773)
+
+# for (i in 2015:2016) {
+#     player_df <- leverage_index_df %>%
+#         filter(game_year == i) %>%
+#         select(pitcher, batter) %>%
+#         melt() %>%
+#         select(-variable) %>%
+#         distinct(value) %>%
+#         arrange(value)
+# 
+#     li_vals <- t(sapply(player_df$value, function(x) {
+#         compare_li(year = i, player = x)})) %>%
+#         as.data.frame() %>%
+#         cbind(player_df, .)
+#     print(li_vals)
+# }
+# 
+# colnames(li_vals) <- c("player", "gmli", "pli", "inli", "exli")
 
 ggplot(data = delta_win_exp_df) +
     geom_line(aes(x = score_diff_num, y = mean_delta_win_exp,
