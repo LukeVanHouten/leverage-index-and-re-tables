@@ -697,3 +697,4 @@ ggplot(data = sample_li_df, mapping = aes(x = li, y = abs_delta_win_exp)) +
     geom_smooth(formula = y ~ x, method = "lm", se = FALSE, col = "red")
 
 plot(cluster, what = "classification")
+plot(cluster, what = "BIC")
