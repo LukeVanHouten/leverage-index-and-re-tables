@@ -2,6 +2,7 @@ library(RPostgres)
 library(tidyverse)
 library(tools)
 library(reshape2)
+library(mclust)
 
 All <- c(2015:2019, 2021:2025)
 
@@ -99,7 +100,7 @@ get_table <- function(moment, stadium, year, ...) {
     return(run_expectancies)
 }
 
-re_table <- get_table(moment = "mean", stadium = "All", year = 2022, 
+re_table <- get_table(moment = "mean", stadium = "All", year = 2025, 
                       batting = "SEA")
 rv_table <- get_table(moment = "var", stadium = "All", year = 2022, 
                       batting = "SEA")
@@ -578,6 +579,14 @@ leverage_index_df <- left_join(year_li_df, inning_weights_df,
     mutate(li = round(li / mean(li), 4))
 View(leverage_index_df)
 
+set.seed(111)
+sample_li_df <- sample_n(leverage_index_df, 10000) %>%
+    mutate(abs_delta_win_exp = abs(delta_win_exp))
+li_model <- lm(abs_delta_win_exp ~ li, data = sample_li_df)
+# summary(li_model)
+
+cluster <- Mclust(select(sample_li_df, li, delta_win_exp), modelNames = "VVV")
+
 boli_df <- leverage_index_df %>%
     group_by(play) %>%
     summarize(li = mean(li), .groups = "drop") %>%
@@ -651,7 +660,7 @@ compare_li <- function(year, player){
 
 compare_li(year = 2022, player = 592773)
 
-# for (i in 2015:2016) {
+# for (i in 2016) {
 #     player_df <- leverage_index_df %>%
 #         filter(game_year == i) %>%
 #         select(pitcher, batter) %>%
@@ -668,6 +677,7 @@ compare_li(year = 2022, player = 592773)
 # }
 # 
 # colnames(li_vals) <- c("player", "gmli", "pli", "inli", "exli")
+# View(li_vals)
 
 ggplot(data = delta_win_exp_df) +
     geom_line(aes(x = score_diff_num, y = mean_delta_win_exp,
@@ -681,3 +691,9 @@ ggplot(data = all_leads_df) +
     scale_x_continuous(breaks = -25:25) +
     scale_y_continuous(breaks = 0:6) +
     scale_colour_discrete(breaks = baseouts)
+
+ggplot(data = sample_li_df, mapping = aes(x = li, y = abs_delta_win_exp)) +
+    geom_point() +
+    geom_smooth(formula = y ~ x, method = "lm", se = FALSE, col = "red")
+
+plot(cluster, what = "classification")
